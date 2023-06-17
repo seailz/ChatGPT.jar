@@ -55,6 +55,7 @@ public class Message {
 
     public enum Role {
         USER,
+        SYSTEM,
         ASSISTANT,
         FUNCTION;
 
