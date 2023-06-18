@@ -64,6 +64,7 @@ public class Message {
                 case "user" -> USER;
                 case "assistant" -> ASSISTANT;
                 case "function" -> FUNCTION;
+                case "system" -> SYSTEM;
                 default -> throw new IllegalArgumentException("Invalid role: " + role);
             };
         }
