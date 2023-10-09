@@ -121,7 +121,9 @@ public class ChatCompletionRequest {
             json.put("functions", functionsJson);
         }
         if (functionCall != null) {
-            json.put("function_call", functionCall);
+            if (!functionCall.equals("none") && !functionCall.equals("auto")) {
+                json.put("function_call", new JSONObject().put("name", functionCall));
+            } else json.put("function_call", functionCall);
         }
 
         if (temperature != 0.0) {
