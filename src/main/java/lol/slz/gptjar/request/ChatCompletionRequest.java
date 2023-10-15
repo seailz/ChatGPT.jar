@@ -117,7 +117,7 @@ public class ChatCompletionRequest {
         JSONObject json = new JSONObject();
         json.put("messages", messagesJson);
         json.put("model", model);
-        if (!functionsJson.isEmpty()) {
+        if (functionsJson.length() > 0)) {
             json.put("functions", functionsJson);
         }
         if (functionCall != null) {
